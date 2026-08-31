@@ -58,20 +58,21 @@ body {
 
 
 /* =========================
-   حركة الظهور
+   حركة الظهور العامة
+   Fade In فقط
 ========================= */
 
 .reveal {
     opacity: 0;
-    transform: translateY(35px);
+    transform: none;
+
     transition:
-        opacity 0.9s ease,
-        transform 0.9s ease;
+        opacity 0.8s ease;
 }
 
 .reveal.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 
@@ -102,7 +103,7 @@ body {
 }
 
 
-/* التوهج الذهبي */
+/* توهج ذهبي خفيف */
 
 .hero::before {
     content: "";
@@ -125,6 +126,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
+
     width: 100%;
 }
 
@@ -330,7 +332,14 @@ section {
 }
 
 
+/* =========================
+   كروت الخدمات
+   تظهر تدريجيًا بدون سحب
+========================= */
+
 .service {
+
+    opacity: 0;
 
     background:
         linear-gradient(
@@ -350,15 +359,21 @@ section {
     text-align: center;
 
     transition:
-        transform 0.35s ease,
+        opacity 0.9s ease,
         border-color 0.35s ease,
         box-shadow 0.35s ease;
 }
 
 
+.service.show {
+    opacity: 1;
+}
+
+
 .service:hover {
 
-    transform: translateY(-7px);
+    transform:
+        translateY(-7px);
 
     border-color:
         rgba(216,170,82,0.7);
@@ -830,7 +845,6 @@ footer strong {
 
 
 /* =========================
-   في حال المستخدم مفعل
    تقليل الحركة
 ========================= */
 
@@ -843,9 +857,13 @@ footer strong {
     *,
     *::before,
     *::after {
+
         animation-duration: 0.01ms !important;
+
         animation-iteration-count: 1 !important;
+
         transition-duration: 0.01ms !important;
+
     }
 
 }
@@ -1211,16 +1229,19 @@ footer strong {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const elements = document.querySelectorAll(".reveal");
+    const elements =
+        document.querySelectorAll(".reveal");
 
 
-    /* إذا كان المتصفح لا يدعم IntersectionObserver
-       نظهر العناصر مباشرة */
+    /* دعم المتصفحات التي لا تدعم
+       IntersectionObserver */
 
     if (!("IntersectionObserver" in window)) {
 
         elements.forEach(function (element) {
+
             element.classList.add("show");
+
         });
 
         return;
@@ -1247,7 +1268,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         {
             threshold: 0.12,
-            rootMargin: "0px 0px -50px 0px"
+            rootMargin: "0px 0px -40px 0px"
         }
 
     );
@@ -1261,7 +1282,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================
-       ظهور الخدمات بالتتابع
+       الخدمات تظهر حبة حبة
     ========================= */
 
     const services =
@@ -1271,7 +1292,7 @@ document.addEventListener("DOMContentLoaded", function () {
     services.forEach(function (service, index) {
 
         service.style.transitionDelay =
-            (index * 0.08) + "s";
+            (index * 0.18) + "s";
 
     });
 
