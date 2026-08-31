@@ -2,20 +2,21 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
 content="ضِلْع صُبح للخدمات العقارية - خدمات عقارية متكاملة في مكة المكرمة">
 
 <title>ضِلْع صُبح | للخدمات العقارية</title>
 
+
 <style>
 
 /* =========================
-‎   الأساس
+   الأساس
 ========================= */
 
 * {
@@ -47,7 +48,7 @@ body {
 
 
 /* =========================
-‎   الحاوية
+   الحاوية
 ========================= */
 
 .container {
@@ -57,13 +58,12 @@ body {
 
 
 /* =========================
-‎   حركة الظهور
+   حركة الظهور
 ========================= */
 
 .reveal {
     opacity: 0;
-    transform: translateY(28px);
-
+    transform: translateY(35px);
     transition:
         opacity 0.9s ease,
         transform 0.9s ease;
@@ -76,7 +76,7 @@ body {
 
 
 /* =========================
-‎   البداية
+   البداية
 ========================= */
 
 .hero {
@@ -102,7 +102,7 @@ body {
 }
 
 
-‎/* توهج ذهبي خفيف */
+/* التوهج الذهبي */
 
 .hero::before {
     content: "";
@@ -112,8 +112,7 @@ body {
     width: 500px;
     height: 500px;
 
-    background:
-        rgba(216,170,82,0.05);
+    background: rgba(216,170,82,0.05);
 
     filter: blur(100px);
 
@@ -126,13 +125,12 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-
     width: 100%;
 }
 
 
 /* =========================
-‎   صورة الجبل
+   صورة الجبل
 ========================= */
 
 .logo-mountain {
@@ -178,7 +176,7 @@ body {
 
 
 /* =========================
-‎   اسم المكتب تحت الجبل
+   اسم المكتب
 ========================= */
 
 .brand-name {
@@ -248,13 +246,17 @@ body {
 
 
 /* =========================
-‎   الأقسام
+   الأقسام
 ========================= */
 
 section {
     padding: 100px 0;
 }
 
+
+/* =========================
+   عنوان القسم
+========================= */
 
 .section-title {
 
@@ -302,7 +304,8 @@ section {
 
 
 /* =========================
-‎   الخدمات========================= */
+   الخدمات
+========================= */
 
 .services {
 
@@ -355,8 +358,7 @@ section {
 
 .service:hover {
 
-    transform:
-        translateY(-7px);
+    transform: translateY(-7px);
 
     border-color:
         rgba(216,170,82,0.7);
@@ -397,7 +399,7 @@ section {
 
 
 /* =========================
-‎   من نحن
+   من نحن
 ========================= */
 
 .about {
@@ -456,7 +458,7 @@ section {
 
 
 /* =========================
-‎   التواصل
+   التواصل
 ========================= */
 
 .contact {
@@ -538,7 +540,7 @@ section {
 
 
 /* =========================
-‎   الأزرار
+   الأزرار
 ========================= */
 
 .buttons {
@@ -579,7 +581,7 @@ section {
 }
 
 
-‎/* واتساب - ذهبي */
+/* واتساب */
 
 .whatsapp {
 
@@ -608,7 +610,7 @@ section {
 }
 
 
-‎/* الاتصال - لون مختلف */
+/* الاتصال */
 
 .call {
 
@@ -634,7 +636,7 @@ section {
 
 
 /* =========================
-‎   الفوتر
+   الفوتر
 ========================= */
 
 footer {
@@ -661,10 +663,12 @@ footer strong {
 
 
 /* =========================
-‎   واتساب عائم
+   واتساب عائم
 ========================= */
 
-.whatsapp-floating {position: fixed;
+.whatsapp-floating {
+
+    position: fixed;
 
     left: 20px;
     bottom: 20px;
@@ -715,7 +719,7 @@ footer strong {
 
 
 /* =========================
-‎   الجوال
+   الجوال
 ========================= */
 
 @media (max-width: 800px) {
@@ -824,6 +828,28 @@ footer strong {
 
 }
 
+
+/* =========================
+   في حال المستخدم مفعل
+   تقليل الحركة
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
 </style>
 
 </head>
@@ -833,14 +859,15 @@ footer strong {
 
 
 <!-- =========================
-‎     البداية
+     البداية
 ========================= -->
 
 <section class="hero" id="home">
 
     <div class="hero-content">
 
-‎        <!-- صورة الجبل -->
+
+        <!-- صورة الجبل -->
 
         <img
             src="logo.png"
@@ -849,27 +876,22 @@ footer strong {
         >
 
 
-‎        <!-- اسم المكتب -->
+        <!-- اسم المكتب -->
 
         <h1 class="brand-name">
-
-‎            ضِلْع صُبح
-
+            ضِلْع صُبح
         </h1>
 
 
         <div class="brand-subtitle">
-
-‎            للخدمات العقارية
-
+            للخدمات العقارية
         </div>
 
 
         <div class="hero-location">
-
-‎            مكة المكرمة
-
+            مكة المكرمة
         </div>
+
 
     </div>
 
@@ -878,7 +900,7 @@ footer strong {
 
 
 <!-- =========================
-‎     الخدمات
+     الخدمات
 ========================= -->
 
 <section class="services" id="services">
@@ -889,13 +911,13 @@ footer strong {
     <div class="section-title reveal">
 
         <h2>
-‎            خدماتنا
+            خدماتنا
         </h2>
 
         <div class="gold-line"></div>
 
         <p>
-‎            حلول عقارية متكاملة تلبي احتياجاتك
+            حلول عقارية متكاملة تلبي احتياجاتك
         </p>
 
     </div>
@@ -912,12 +934,12 @@ footer strong {
             </div>
 
             <h3>
-‎                الوساطة العقارية
+                الوساطة العقارية
             </h3>
 
             <p>
-‎                المساعدة في إتمام العمليات
-‎                العقارية بين الأطراف.
+                المساعدة في إتمام العمليات
+                العقارية بين الأطراف.
             </p>
 
         </div>
@@ -931,12 +953,12 @@ footer strong {
             </div>
 
             <h3>
-‎                بيع وشراء العقارات
+                بيع وشراء العقارات
             </h3>
 
             <p>
-‎                خدمات تسويقية ومساندة للراغبين
-‎                في بيع أو شراء العقارات.
+                خدمات تسويقية ومساندة للراغبين
+                في بيع أو شراء العقارات.
             </p>
 
         </div>
@@ -950,12 +972,12 @@ footer strong {
             </div>
 
             <h3>
-‎                تأجير العقارات
+                تأجير العقارات
             </h3>
 
             <p>
-‎                المساعدة في تسويق العقارات
-‎                والوصول إلى المستأجرين.
+                المساعدة في تسويق العقارات
+                والوصول إلى المستأجرين.
             </p>
 
         </div>
@@ -969,12 +991,12 @@ footer strong {
             </div>
 
             <h3>
-‎                التسويق العقاري
+                التسويق العقاري
             </h3>
 
             <p>
-‎                تسويق العقارات والوحدات
-‎                السكنية والتجارية.
+                تسويق العقارات والوحدات
+                السكنية والتجارية.
             </p>
 
         </div>
@@ -988,11 +1010,12 @@ footer strong {
             </div>
 
             <h3>
-‎                إدارة الأملاك</h3>
+                إدارة الأملاك
+            </h3>
 
             <p>
-‎                خدمات مرتبطة بإدارة ومتابعة
-‎                العقارات والأملاك.
+                خدمات مرتبطة بإدارة ومتابعة
+                العقارات والأملاك.
             </p>
 
         </div>
@@ -1006,12 +1029,12 @@ footer strong {
             </div>
 
             <h3>
-‎                الاستشارات العقارية
+                الاستشارات العقارية
             </h3>
 
             <p>
-‎                تقديم المعلومات والمشورة المتعلقة
-‎                بالفرص والخدمات العقارية.
+                تقديم المعلومات والمشورة المتعلقة
+                بالفرص والخدمات العقارية.
             </p>
 
         </div>
@@ -1026,7 +1049,7 @@ footer strong {
 
 
 <!-- =========================
-‎     من نحن
+     من نحن
 ========================= -->
 
 <section class="about">
@@ -1037,19 +1060,18 @@ footer strong {
 
 
         <div class="about-label">
-
-‎            ✦ ضِلْع صُبح العقارية ✦
-
+            ✦ ضِلْع صُبح العقارية ✦
         </div>
 
 
         <h2>
 
-‎            من أرض صلبة
+            من أرض صلبة
+
             <br>
 
             <span>
-‎                نحو القمة
+                نحو القمة
             </span>
 
         </h2>
@@ -1057,18 +1079,18 @@ footer strong {
 
         <p class="about-text">
 
-‎            في ضِلْع صُبح للخدمات العقارية،
-‎            نؤمن أن التعامل العقاري الناجح
-‎            يبدأ بالثقة والوضوح.
+            في ضِلْع صُبح للخدمات العقارية،
+            نؤمن أن التعامل العقاري الناجح
+            يبدأ بالثقة والوضوح.
 
         </p>
 
 
         <p class="about-text">
 
-‎            نسعى إلى تقديم خدمات عقارية احترافية
-‎            تلبي احتياجات عملائنا وتساعدهم في
-‎            الوصول إلى الخيارات المناسبة.
+            نسعى إلى تقديم خدمات عقارية احترافية
+            تلبي احتياجات عملائنا وتساعدهم في
+            الوصول إلى الخيارات المناسبة.
 
         </p>
 
@@ -1082,7 +1104,7 @@ footer strong {
 
 
 <!-- =========================
-‎     التواصل
+     التواصل
 ========================= -->
 
 <section class="contact" id="contact">
@@ -1094,12 +1116,12 @@ footer strong {
 
 
         <h2>
-‎            تواصل معنا
+            تواصل معنا
         </h2>
 
 
         <p>
-‎            نحن هنا لخدمتك
+            نحن هنا لخدمتك
         </p>
 
 
@@ -1114,24 +1136,25 @@ footer strong {
         <div class="buttons">
 
 
-‎            <!-- واتساب -->
+            <!-- واتساب -->
 
             <a
                 href="https://wa.me/966544715171"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn whatsapp"
             >
-‎                واتساب
+                واتساب
             </a>
 
 
-‎            <!-- اتصال -->
+            <!-- اتصال -->
 
             <a
                 href="tel:+966544715171"
                 class="btn call"
             >
-‎                اتصال مباشر
+                اتصال مباشر
             </a>
 
 
@@ -1147,7 +1170,7 @@ footer strong {
 
 
 <!-- =========================
-‎     الفوتر
+     الفوتر
 ========================= -->
 
 <footer>
@@ -1155,22 +1178,23 @@ footer strong {
     © 2026
 
     <strong>
-‎        ضِلْع صُبح للخدمات العقارية
+        ضِلْع صُبح للخدمات العقارية
     </strong>
 
-‎    — جميع الحقوق محفوظة
+    — جميع الحقوق محفوظة
 
 </footer>
 
 
 
 <!-- =========================
-‎     واتساب عائم
+     واتساب عائم
 ========================= -->
 
 <a
     href="https://wa.me/966544715171"
     target="_blank"
+    rel="noopener noreferrer"
     class="whatsapp-floating"
     aria-label="واتساب"
 >
@@ -1182,71 +1206,76 @@ footer strong {
 <script>
 
 /* =========================
-‎   ظهور العناصر تدريجياً
+   ظهور العناصر عند الوصول لها
 ========================= */
 
-const elements =
-    document.querySelectorAll(".reveal");
+document.addEventListener("DOMContentLoaded", function () {
+
+    const elements = document.querySelectorAll(".reveal");
 
 
-const observer =
-    new IntersectionObserver(
+    /* إذا كان المتصفح لا يدعم IntersectionObserver
+       نظهر العناصر مباشرة */
 
-        (entries) => {
+    if (!("IntersectionObserver" in window)) {
 
-            entries.forEach(
-                (entry) => {
+        elements.forEach(function (element) {
+            element.classList.add("show");
+        });
 
-                    if (
-                        entry.isIntersecting
-                    ) {
+        return;
+    }
 
-                        entry.target
-                            .classList
-                            .add("show");
 
-                        observer
-                            .unobserve(
-                                entry.target
-                            );
+    const observer = new IntersectionObserver(
 
-                    }
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
 
                 }
-            );
+
+            });
 
         },
 
         {
-            threshold: 0.15
+            threshold: 0.12,
+            rootMargin: "0px 0px -50px 0px"
         }
 
     );
 
 
-elements.forEach(
-    (element) => {
+    elements.forEach(function (element) {
 
         observer.observe(element);
 
-    }
-);
+    });
 
 
-‎/* ظهور الخدمات بشكل متتابع */
+    /* =========================
+       ظهور الخدمات بالتتابع
+    ========================= */
 
-const services =
-    document.querySelectorAll(".service");
+    const services =
+        document.querySelectorAll(".service");
 
 
-services.forEach(
-    (service, index) => {
+    services.forEach(function (service, index) {
 
         service.style.transitionDelay =
-            ${index * 0.08}s;
+            (index * 0.08) + "s";
 
-    }
-);
+    });
+
+});
 
 </script>
 
